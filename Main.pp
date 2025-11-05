@@ -1,6 +1,6 @@
 #include <JuceHeader.h>
 #include "MainComponent.h"
-
+joj
 class AudioPlayerApplication : public juce::JUCEApplication
 {
 public:
