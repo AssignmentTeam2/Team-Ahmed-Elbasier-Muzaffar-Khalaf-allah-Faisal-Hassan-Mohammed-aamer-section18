@@ -12,7 +12,7 @@ MainComponent::MainComponent()
         b->addListener(this);
     }
 
-    // Sliders setup
+    
     volumeSlider.setRange(0.0, 1.0, 0.01);
     volumeSlider.setValue(0.5);
     volumeSlider.addListener(this);
@@ -27,19 +27,19 @@ MainComponent::MainComponent()
     speedSlider.addListener(this);
     addAndMakeVisible(speedSlider);
 
-    // Labels
+    
     addAndMakeVisible(fileLabel);
     addAndMakeVisible(timeLabel);
     addAndMakeVisible(markersLabel);
 
-    // Playlist Box (لون الخلفية ثابت وبدون outline أبيض)
+    
     playlistBox.setModel(nullptr);
     playlistBox.setColour(juce::ListBox::backgroundColourId, juce::Colours::darkgrey);
     playlistBox.setColour(juce::ListBox::outlineColourId, juce::Colours::transparentBlack);
     playlistBox.setRowHeight(22);
     addAndMakeVisible(playlistBox);
 
-    // استعادة الجلسة السابقة إن وُجدت
+    
     sessionFile = juce::File::getSpecialLocation(juce::File::userDocumentsDirectory)
                     .getChildFile("audioplayer_session.props");
 
@@ -69,7 +69,7 @@ void MainComponent::resized()
     int buttonH = 30;
     int x = margin, y = margin;
 
-    // الصف الأول من الأزرار
+    
     for (auto* b : { &loadButton, &playPauseButton, &restartButton, &stopButton,
                      &startButton, &endButton })
     {
@@ -77,7 +77,7 @@ void MainComponent::resized()
         x += buttonW + margin;
     }
 
-    // الصف الثاني
+    
     y += buttonH + margin;
     x = margin;
     for (auto* b : { &muteButton, &loopButton, &jumpBack, &jumpForward, &addMarkerButton })
@@ -86,7 +86,7 @@ void MainComponent::resized()
         x += buttonW + margin;
     }
 
-    // السلايدرات
+    
     y += buttonH + margin;
     volumeSlider.setBounds(margin, y, getWidth() - 270, 25);
     y += 35;
@@ -94,7 +94,7 @@ void MainComponent::resized()
     y += 35;
     speedSlider.setBounds(margin, y, getWidth() - 270, 25);
 
-    // اللابلز
+    
     y += 40;
     fileLabel.setBounds(margin, y, getWidth() - 270, 25);
     y += 25;
@@ -102,7 +102,7 @@ void MainComponent::resized()
     y += 25;
     markersLabel.setBounds(margin, y, getWidth() - 270, 25);
 
-    // قائمة التشغيل
+    
     playlistBox.setBounds(getWidth() - 250, margin, 230, getHeight() - 2 * margin);
 }
 
@@ -201,7 +201,7 @@ void MainComponent::updateUI()
 
     volumeSlider.setValue(audio.getGain(), juce::dontSendNotification);
 
-    // markers
+    
     juce::String mkStr;
     for (auto m : audio.getMarkers())
         mkStr += toTime(m) + "  ";
