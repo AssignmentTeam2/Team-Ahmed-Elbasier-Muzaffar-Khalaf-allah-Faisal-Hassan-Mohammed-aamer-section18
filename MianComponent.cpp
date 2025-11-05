@@ -32,7 +32,7 @@ MainComponent::MainComponent()
     addAndMakeVisible(timeLabel);
     addAndMakeVisible(markersLabel);
 
-    // Playlist Box (لون الخلفية ثابت وبدون outline أبيض)
+    // Playlist Box (لون الخلفية   ثابت وبدون outline أبيض)
     playlistBox.setModel(nullptr);
     playlistBox.setColour(juce::ListBox::backgroundColourId, juce::Colours::darkgrey);
     playlistBox.setColour(juce::ListBox::outlineColourId, juce::Colours::transparentBlack);
