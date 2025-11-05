@@ -6,6 +6,7 @@ PlayerAudio::PlayerAudio()
     formatManager.registerBasicFormats();
     transportSource.setLooping(false);
 
+  
     deviceManager.initialise(0, 2, nullptr, true);
     resamplerSource = std::make_unique<juce::ResamplingAudioSource>(&transportSource, false, 2);
     audioSourcePlayer.setSource(resamplerSource.get());
