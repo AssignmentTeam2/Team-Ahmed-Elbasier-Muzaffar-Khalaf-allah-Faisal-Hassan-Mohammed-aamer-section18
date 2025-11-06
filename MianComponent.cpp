@@ -96,7 +96,7 @@ void MainComponent::resized()
     y += 35;
     speedSlider.setBounds(margin, y, getWidth() - 270, 25);
 
-    
+    //gg
     y += 40;
     fileLabel.setBounds(margin, y, getWidth() - 270, 25);
     y += 25;
@@ -127,7 +127,8 @@ void MainComponent::buttonClicked(juce::Button* button)
                     audio.playIndex(audio.getPlaylistSize() - 1);
                 }
             });
-    }
+ 
+}
     else if (button == &playPauseButton)
         audio.isPlaying() ? audio.pause() : audio.play();
 
