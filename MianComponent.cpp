@@ -203,7 +203,7 @@ void MainComponent::updateUI()
 
     volumeSlider.setValue(audio.getGain(), juce::dontSendNotification);
 
-    
+   //juce
     juce::String mkStr;
     for (auto m : audio.getMarkers())
         mkStr += toTime(m) + "  ";
