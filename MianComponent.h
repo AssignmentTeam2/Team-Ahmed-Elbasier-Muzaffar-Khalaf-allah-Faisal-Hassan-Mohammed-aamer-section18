@@ -37,9 +37,9 @@ private:
     juce::TextButton addMarkerButton{ "Add Marker" };
 
     // Sliders
-    juce::Slider volumeSlider;   // للتحكم بالصوت
-    juce::Slider positionSlider; // لموضع التشغيل
-    juce::Slider speedSlider;    // لسرعة التشغيل
+    juce::Slider volumeSlider;   // للتحكم  بالصوت
+    juce::Slider positionSlider; // لموضع  التشغيل
+    juce::Slider speedSlider;    // لسرعة  التشغيل
 
     // Labels
     juce::Label fileLabel{ "file", "No file loaded" };
