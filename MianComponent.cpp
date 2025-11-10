@@ -41,8 +41,6 @@ MainComponent::MainComponent()
 
     
    
-
-
     sessionFile = juce::File::getSpecialLocation(juce::File::userDocumentsDirectory)
                     .getChildFile("audioplayer_session.props");
 
